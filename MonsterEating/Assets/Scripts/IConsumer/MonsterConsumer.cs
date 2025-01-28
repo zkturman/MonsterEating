@@ -17,11 +17,11 @@ public class MonsterConsumer : MonoBehaviour, IFoodConsumer
         _foodMonsterMap = _evolutions.ToDictionary(x => x.RequiredFood, x => x.Evolution);
     }
 
-    public void ConsumeFood(FoodKey foodToEat)
+    public void ConsumeFood(FoodData foodToEat)
     {
-        if (_foodMonsterMap.ContainsKey(foodToEat))
+        if (_foodMonsterMap.ContainsKey(foodToEat.FoodKey))
         {
-            MonsterKey nextMonster = _foodMonsterMap[foodToEat];
+            MonsterKey nextMonster = _foodMonsterMap[foodToEat.FoodKey];
             EvolutionVoter.VoteChoice(nextMonster);
         }
     }
