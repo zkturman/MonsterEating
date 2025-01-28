@@ -600,6 +600,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6466428752655574626, guid: 46c11e32782b1c54ab30313c59c0f38c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1749268536}
+    - targetCorrespondingSourceObject: {fileID: 6466428752655574626, guid: 46c11e32782b1c54ab30313c59c0f38c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1749268537}
+    - targetCorrespondingSourceObject: {fileID: 6466428752655574626, guid: 46c11e32782b1c54ab30313c59c0f38c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1749268538}
   m_SourcePrefab: {fileID: 100100000, guid: 46c11e32782b1c54ab30313c59c0f38c, type: 3}
 --- !u!4 &1749268534 stripped
 Transform:
@@ -628,6 +634,37 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _monsterAnimator: {fileID: 1749268535}
+--- !u!114 &1749268537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743262349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionChoices: 0100000002000000
+--- !u!114 &1749268538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743262349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _evolutions:
+  - _evolution: 1
+    _requiredFood: 0
+  - _evolution: 2
+    _requiredFood: 1
+  _evolutionVoter: {fileID: 1749268537}
 --- !u!1 &1845871795
 GameObject:
   m_ObjectHideFlags: 0

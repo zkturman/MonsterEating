@@ -38,4 +38,9 @@ public class MonsterController : MonoBehaviour
             }
         }
     }
+
+    public void EvolveMonster()
+    {
+
+    }
 }
