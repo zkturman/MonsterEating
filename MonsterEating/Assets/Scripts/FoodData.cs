@@ -10,4 +10,7 @@ public class FoodData : MonoBehaviour
     [SerializeField]
     private FoodKey _foodKey;
     public FoodKey FoodKey { get => _foodKey; }
+    [SerializeField]
+    private GameObject _destroyEffect;
+    public GameObject DestroyEffect { get => _destroyEffect; }
 }

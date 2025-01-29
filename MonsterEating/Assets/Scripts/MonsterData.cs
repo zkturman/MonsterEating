@@ -17,6 +17,12 @@ public class MonsterData : MonoBehaviour
     private string _eatAnimationKey = "Eat";
     public string EatAnimationKey { get => _eatAnimationKey; }
     [SerializeField]
+    private string _dieAnimationKey = "Die";
+    public string DieAnimationKey {  get => _dieAnimationKey; }
+    [SerializeField]
+    private float _dieAnimationTimeInSeconds = 0.5f;
+    public float DieAnimationTimeInSeconds { get => _dieAnimationTimeInSeconds; }
+    [SerializeField]
     private Animator _monsterAnimator;
     public Animator MonsterAnimator { get => _monsterAnimator; }
     [SerializeField]

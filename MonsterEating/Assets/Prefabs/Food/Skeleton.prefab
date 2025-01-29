@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _foodName: Skeleton
   _foodKey: 3
+  _destroyEffect: {fileID: 1105845044999903297, guid: 281f3edc2dab3894184a834129b31cbf, type: 3}
 --- !u!54 &8876140747236511892
 Rigidbody:
   m_ObjectHideFlags: 0

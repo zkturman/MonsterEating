@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _evolveEffectPrefab;
+    [SerializeField]
+    private GameObject _deathEffectPrefab;
     private MonsterData _currentMonster = null;
     private string _currentAnimation = string.Empty;
 
@@ -46,26 +50,36 @@ public class MonsterController : MonoBehaviour
         {
             _currentMonster.MonsterConsumer.ConsumeFood(foodToEat);
             bool canEvolve = _currentMonster.MonsterConsumer.EvolutionVoter.RequiredCountMet();
-            SoundEffectKey soundEffect = SoundEffectKey.Eat;
             if (foodToEat.FoodKey == FoodKey.Deadlie)
             {
-                soundEffect = SoundEffectKey.Die;
+                GameOver();
             }
             else if (canEvolve)
             {
                 EvolveMonster();
             }
-            SoundEffectManager.PlayEffect(soundEffect);
+            else
+            {
+                SoundEffectManager.PlayEffect(SoundEffectKey.Eat);
+            }
         }
     }
 
     public void EvolveMonster()
     {
+        StartCoroutine(evolveRoutine());
+    }
+
+    private IEnumerator evolveRoutine()
+    {
         MonsterKey nextMonsterKey = _currentMonster.MonsterConsumer.EvolutionVoter.FindWinner();
         Destroy(_currentMonster.gameObject);
+        _currentMonster = null;
+        Instantiate(_evolveEffectPrefab, this.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
         GameObject nextMonsterPrefab = MonsterManager.GetMonsterPrefab(nextMonsterKey);
-        GameObject newMonster = Instantiate(nextMonsterPrefab, this.transform.position, Quaternion.identity);
-        newMonster.transform.SetParent(this.transform, true);
+        GameObject newMonster = Instantiate(nextMonsterPrefab, this.transform);
+        newMonster.transform.position = this.transform.position;
         _currentMonster = newMonster.GetComponent<MonsterData>();
         _currentAnimation = string.Empty;
         SoundEffectManager.PlayEffect(SoundEffectKey.Evolve);
@@ -73,6 +87,20 @@ public class MonsterController : MonoBehaviour
 
     public void GameOver()
     {
+        StartCoroutine(deathRoutine());
+    }
 
+    private IEnumerator deathRoutine()
+    {
+        if (_currentMonster != null)
+        {
+            SoundEffectManager.PlayEffect(SoundEffectKey.Die);
+            _currentMonster.MonsterAnimator.SetTrigger(_currentMonster.DieAnimationKey);
+            float timeToWaitInSeconds = _currentMonster.DieAnimationTimeInSeconds;
+            _currentMonster = null;
+            Instantiate(_deathEffectPrefab, this.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(timeToWaitInSeconds + 1);
+            SceneManager.OpenScene("GameOverMenu");
+        }
     }
 }

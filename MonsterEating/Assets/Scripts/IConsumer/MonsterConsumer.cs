@@ -25,6 +25,10 @@ public class MonsterConsumer : MonoBehaviour, IFoodConsumer
             MonsterKey nextMonster = _foodMonsterMap[foodToEat.FoodKey];
             EvolutionVoter.VoteChoice(nextMonster);
         }
+        if (foodToEat.DestroyEffect != null)
+        {
+            Instantiate(foodToEat.DestroyEffect, foodToEat.transform.position, Quaternion.identity);
+        }
         Destroy(foodToEat.gameObject);
     }
 }

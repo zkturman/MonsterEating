@@ -482,7 +482,7 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _monsterAnimator: {fileID: 3351107726505084129}
-  _monsterConsumer: {fileID: 0}
+  _monsterConsumer: {fileID: 750521160206829419}
 --- !u!114 &8777489013107467894
 MonoBehaviour:
   m_ObjectHideFlags: 0
