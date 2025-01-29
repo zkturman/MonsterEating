@@ -19,4 +19,7 @@ public class MonsterData : MonoBehaviour
     [SerializeField]
     private Animator _monsterAnimator;
     public Animator MonsterAnimator { get => _monsterAnimator; }
+    [SerializeField]
+    private MonsterConsumer _monsterConsumer;
+    public MonsterConsumer MonsterConsumer { get => _monsterConsumer; }
 }

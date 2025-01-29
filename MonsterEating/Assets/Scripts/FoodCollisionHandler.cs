@@ -8,10 +8,17 @@ public class FoodCollisionHandler : MonoBehaviour
     private FoodData _foodInfo;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out MonsterConsumer monster))
+        if (collision.gameObject.TryGetComponent(out CharacterController monster))
         {
-            monster.ConsumeFood(_foodInfo);
-            Debug.Log("Eat food and stuff.");
+            MonsterController controller = monster.GetComponentInChildren<MonsterController>();
+            if (controller != null) 
+            {
+                controller.EatFood(_foodInfo);
+            }
+        }
+        else if (collision.gameObject.tag == "Floor")
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -39,6 +39,14 @@ public class MonsterController : MonoBehaviour
         }
     }
 
+    public void EatFood(FoodData foodToEat)
+    {
+        if (_currentMonster != null)
+        {
+            _currentMonster.MonsterConsumer.ConsumeFood(foodToEat);
+        }
+    }
+
     public void EvolveMonster()
     {
 
