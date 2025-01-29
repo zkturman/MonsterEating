@@ -385,6 +385,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6605561159347671711}
   - component: {fileID: 2912134161502295901}
+  - component: {fileID: 945003756091505335}
+  - component: {fileID: 5393522094136276094}
+  - component: {fileID: 5669707556922795443}
+  - component: {fileID: 3806490128076711252}
   m_Layer: 0
   m_Name: Starter
   m_TagString: Untagged
@@ -419,7 +423,7 @@ Animator:
   m_GameObject: {fileID: 6466428752655574626}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fd4b310424927a840906404a14eeb5e4, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 47e24517643967d41bca9a16869f6a67, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -430,6 +434,79 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &945003756091505335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466428752655574626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d04319a84e7f694c820071a8698528b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _idleAnimationKey: Idle
+  _moveAnimationKey: Move
+  _eatAnimationKey: Eat
+  _monsterAnimator: {fileID: 2912134161502295901}
+  _monsterConsumer: {fileID: 0}
+--- !u!114 &5393522094136276094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466428752655574626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionChoices: 0100000002000000
+  _requiredCount: 10
+--- !u!114 &5669707556922795443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466428752655574626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _evolutions:
+  - _evolution: 1
+    _requiredFood: 0
+  - _evolution: 2
+    _requiredFood: 1
+  _evolutionVoter: {fileID: 0}
+--- !u!136 &3806490128076711252
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466428752655574626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.008
+  m_Height: 0.02
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.01, z: 0}
 --- !u!1 &8560614165100625662
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class MonsterController : MonoBehaviour
@@ -44,10 +45,33 @@ public class MonsterController : MonoBehaviour
         if (_currentMonster != null)
         {
             _currentMonster.MonsterConsumer.ConsumeFood(foodToEat);
+            bool canEvolve = _currentMonster.MonsterConsumer.EvolutionVoter.RequiredCountMet();
+            SoundEffectKey soundEffect = SoundEffectKey.Eat;
+            if (foodToEat.FoodKey == FoodKey.Deadlie)
+            {
+                soundEffect = SoundEffectKey.Die;
+            }
+            else if (canEvolve)
+            {
+                EvolveMonster();
+            }
+            SoundEffectManager.PlayEffect(soundEffect);
         }
     }
 
     public void EvolveMonster()
+    {
+        MonsterKey nextMonsterKey = _currentMonster.MonsterConsumer.EvolutionVoter.FindWinner();
+        Destroy(_currentMonster.gameObject);
+        GameObject nextMonsterPrefab = MonsterManager.GetMonsterPrefab(nextMonsterKey);
+        GameObject newMonster = Instantiate(nextMonsterPrefab, this.transform.position, Quaternion.identity);
+        newMonster.transform.SetParent(this.transform, true);
+        _currentMonster = newMonster.GetComponent<MonsterData>();
+        _currentAnimation = string.Empty;
+        SoundEffectManager.PlayEffect(SoundEffectKey.Evolve);
+    }
+
+    public void GameOver()
     {
 
     }

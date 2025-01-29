@@ -29,7 +29,7 @@ public class FoodSpawner : MonoBehaviour
         {
             int foodDiceRoll = Random.Range(0, _possibleFoodPrefabs.Length);
             int spawnDiceRoll = Random.Range(0, _possibleSpawnPoints.Length);
-            Instantiate(_possibleFoodPrefabs[foodDiceRoll], _possibleSpawnPoints[spawnDiceRoll].transform.position, Quaternion.identity);
+            Instantiate(_possibleFoodPrefabs[foodDiceRoll], _possibleSpawnPoints[spawnDiceRoll].transform.position, Quaternion.identity);  
             _elapsedTime = 0f;
         }
     }

@@ -8,7 +8,7 @@ public class FoodCollisionHandler : MonoBehaviour
     private FoodData _foodInfo;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out CharacterController monster))
+        if (collision.gameObject.TryGetComponent(out MainController monster))
         {
             MonsterController controller = monster.GetComponentInChildren<MonsterController>();
             if (controller != null) 
