@@ -48,7 +48,7 @@ public class MonsterController : MonoBehaviour
     {
         if (_currentMonster != null)
         {
-            _currentMonster.MonsterConsumer.ConsumeFood(foodToEat);
+            bool couldEatFood = _currentMonster.MonsterConsumer.ConsumeFood(foodToEat);
             bool canEvolve = _currentMonster.MonsterConsumer.EvolutionVoter.RequiredCountMet();
             if (foodToEat.FoodKey == FoodKey.Deadlie)
             {
@@ -58,9 +58,13 @@ public class MonsterController : MonoBehaviour
             {
                 EvolveMonster();
             }
-            else
+            else if (couldEatFood)
             {
                 SoundEffectManager.PlayEffect(SoundEffectKey.Eat);
+            }
+            else
+            {
+                SoundEffectManager.PlayEffect(SoundEffectKey.BadEat);
             }
         }
     }

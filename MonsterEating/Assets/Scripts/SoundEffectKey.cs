@@ -5,6 +5,7 @@ using UnityEngine;
 public enum SoundEffectKey
 {
     Eat,
+    BadEat,
     Evolve,
     Die,
     Enter

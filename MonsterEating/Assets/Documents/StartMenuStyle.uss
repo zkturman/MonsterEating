@@ -5,7 +5,7 @@ VisualElement {
     font-size: 250px;
     -unity-font: url('project://database/Assets/AssetPacks/Fonts/GhoulFriAOE.ttf?fileID=12800000&guid=a218f5a91ba84f9488cfac747313e027&type=3#GhoulFriAOE');
     -unity-font-definition: initial;
-    -unity-text-align: upper-center;
+    -unity-text-align: middle-center;
     color: rgb(255, 160, 0);
     text-shadow: 117.4px 22.7px 0 rgb(0, 0, 0);
     -unity-text-outline-width: 0;

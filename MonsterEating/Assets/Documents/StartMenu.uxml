@@ -3,8 +3,8 @@
     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: space-between;">
         <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
             <ui:VisualElement name="VisualElement" style="background-color: rgba(0, 0, 0, 0); justify-content: center; align-items: center; flex-grow: 1; flex-direction: column;">
-                <ui:Label tabindex="-1" text="Monsters," display-tooltip-when-elided="true" class="title-text" style="align-items: flex-start; align-self: flex-start; flex-grow: 0; flex-direction: row;" />
-                <ui:Label tabindex="-1" text="Eating" display-tooltip-when-elided="true" class="title-text" style="align-items: center;" />
+                <ui:Label tabindex="-1" text="You&apos;ve" display-tooltip-when-elided="true" name="Label" class="title-text" style="flex-grow: 0; flex-direction: row;" />
+                <ui:Label tabindex="-1" text="Changed" display-tooltip-when-elided="true" class="title-text" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); justify-content: flex-end;">

@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IFoodConsumer
 {
     public EvolutionData EvolutionVoter { get; }
-    public void ConsumeFood(FoodData foodToEat);
+    public bool ConsumeFood(FoodData foodToEat);
 }

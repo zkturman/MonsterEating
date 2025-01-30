@@ -211,10 +211,12 @@ MonoBehaviour:
   - _key: 0
     _soundEffect: {fileID: 8300000, guid: cf6c0e7fbef9449c98a0cdb5ea0c4d9f, type: 3}
   - _key: 1
-    _soundEffect: {fileID: 8300000, guid: 0c008ee3ee72a4362a35be25fa5de043, type: 3}
+    _soundEffect: {fileID: 8300000, guid: 724131bc8a7f34041bb9f1701f0cb58d, type: 3}
   - _key: 2
     _soundEffect: {fileID: 8300000, guid: 5039414d94a6e4e70a5ab9e8833e992a, type: 3}
   - _key: 3
+    _soundEffect: {fileID: 8300000, guid: 72127805eb2bc4e7fbf2e02eca266cfa, type: 3}
+  - _key: 4
     _soundEffect: {fileID: 8300000, guid: 130a177e727814a2ea78a886ab72213d, type: 3}
 --- !u!82 &5998424760897144777
 AudioSource:

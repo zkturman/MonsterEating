@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class OnDestroyCleanup : MonoBehaviour
 {
+    private MonsterController _deadMonster;
+    private void Awake()
+    {
+        _deadMonster = FindObjectOfType<MonsterController>(true);
+    }
+
     private void OnDestroy()
     {
-        GameObject _deadMonster = FindObjectOfType<MonsterController>().gameObject;
         if (_deadMonster != null)
         {
-            Destroy(_deadMonster);
+            Destroy(_deadMonster.gameObject);
         }
     }
 }
