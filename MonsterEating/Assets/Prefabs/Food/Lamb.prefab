@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _foodName: Lamb
   _foodKey: 1
+  _destroyEffect: {fileID: 0}
 --- !u!54 &2155754850730597289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ Rigidbody:
   m_GameObject: {fileID: 1156098292395451620}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}

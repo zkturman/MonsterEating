@@ -485,6 +485,8 @@ MonoBehaviour:
     _requiredFood: 0
   - _evolution: 2
     _requiredFood: 1
+  - _evolution: 1
+    _requiredFood: 2
   _evolutionVoter: {fileID: 5393522094136276094}
 --- !u!136 &3806490128076711252
 CapsuleCollider:
