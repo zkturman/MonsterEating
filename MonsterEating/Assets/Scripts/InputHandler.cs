@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Security;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -14,5 +15,13 @@ public class InputHandler : MonoBehaviour
     {
         _moveValue = (short)context.ReadValue<Vector2>().x;
         _mainController?.SetControllerMovement(_moveValue);
+    }
+
+    public void OnEnter(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            SoundEffectManager.PlayEffect(SoundEffectKey.Enter);
+        }
     }
 }
