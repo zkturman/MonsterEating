@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Documents/StartMenuStyle.uss?fileID=7433441132597879392&amp;guid=4f6b8908a5d9f214ca38a4940e964ed8&amp;type=3#StartMenuStyle" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: space-between;">
+        <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
+            <ui:VisualElement name="VisualElement" style="background-color: rgba(0, 0, 0, 0); justify-content: center; align-items: center; flex-grow: 1; flex-direction: column;">
+                <ui:Label tabindex="-1" text="Game" display-tooltip-when-elided="true" class="title-text" style="align-items: flex-start; align-self: flex-start; flex-grow: 0; flex-direction: row; color: rgb(144, 21, 22); font-size: 270px;" />
+                <ui:Label tabindex="-1" text="Over" display-tooltip-when-elided="true" name="Label" class="title-text" style="align-items: center; color: rgb(144, 21, 22);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); justify-content: flex-end; align-items: center;">
+            <ui:Label tabindex="-1" text="Press Space to Continue..." display-tooltip-when-elided="true" class="general-text" style="-unity-font: url(&apos;project://database/Assets/AssetPacks/Fonts/GhoulFriAOE.ttf?fileID=12800000&amp;guid=a218f5a91ba84f9488cfac747313e027&amp;type=3#GhoulFriAOE&apos;); -unity-text-align: upper-center; font-size: 60px; -unity-font-definition: initial; height: 274%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

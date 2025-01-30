@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainController: {fileID: 6720095823770744307}
+  _onEnterSceneTarget: 
 --- !u!54 &2397366641530032166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -234,10 +235,6 @@ PrefabInstance:
       propertyPath: _monsterConsumer
       value: 
       objectReference: {fileID: 5476413672508847881}
-    - target: {fileID: 5393522094136276094, guid: 46c11e32782b1c54ab30313c59c0f38c, type: 3}
-      propertyPath: _requiredCount
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669707556922795443, guid: 46c11e32782b1c54ab30313c59c0f38c, type: 3}
       propertyPath: _evolutionVoter
       value: 

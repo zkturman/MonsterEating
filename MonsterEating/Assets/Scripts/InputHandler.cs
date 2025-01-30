@@ -10,6 +10,8 @@ public class InputHandler : MonoBehaviour
     private short _moveValue = 0;
     [SerializeField]
     private MainController _mainController;
+    [SerializeField]
+    private string _onEnterSceneTarget;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -21,7 +23,14 @@ public class InputHandler : MonoBehaviour
     {
         if (context.performed)
         {
-            SoundEffectManager.PlayEffect(SoundEffectKey.Enter);
+            StartCoroutine(enterRoutine());
         }
+    }
+
+    private IEnumerator enterRoutine()
+    {
+        SoundEffectManager.PlayEffect(SoundEffectKey.Enter);
+        yield return new WaitForSeconds(1);
+        SceneManager.OpenScene(_onEnterSceneTarget);
     }
 }

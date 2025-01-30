@@ -82,6 +82,7 @@ public class MonsterController : MonoBehaviour
         newMonster.transform.position = this.transform.position;
         _currentMonster = newMonster.GetComponent<MonsterData>();
         _currentAnimation = string.Empty;
+        SaveManager.SaveMonster(nextMonsterKey);
         SoundEffectManager.PlayEffect(SoundEffectKey.Evolve);
     }
 
@@ -100,7 +101,21 @@ public class MonsterController : MonoBehaviour
             _currentMonster = null;
             Instantiate(_deathEffectPrefab, this.transform.position, Quaternion.identity);
             yield return new WaitForSeconds(timeToWaitInSeconds + 1);
+            this.transform.SetParent(null);
+            DontDestroyOnLoad(this.gameObject);
             SceneManager.OpenScene("GameOverMenu");
         }
+    }
+
+    public float GetEvolutionPercentage()
+    {
+        float currentPercent = -1f;
+        if (_currentMonster != null)
+        {
+            float totalAte = _currentMonster.MonsterConsumer.EvolutionVoter.GetCurrentTotal();
+            float requiredAmount = _currentMonster.MonsterConsumer.EvolutionVoter.RequiredCount;
+            currentPercent = totalAte / requiredAmount;
+        }
+        return currentPercent;
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1401300381301476460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7524531912920408497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RootControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7720055272409453669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RootJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1181089531655473790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RIG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8384975662251224213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadTipJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4769362106688088982}
   - component: {fileID: 6747361971767623143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7230854520806330280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TailControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6057812658020940590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TailJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379552512759361035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6944929386787724864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 5393522094136276094}
   - component: {fileID: 5669707556922795443}
   - component: {fileID: 3806490128076711252}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Starter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   evolutionChoices: 0100000002000000
-  _requiredCount: 10
+  _requiredCount: 8
 --- !u!114 &5669707556922795443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5716025180171039498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GhostControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}

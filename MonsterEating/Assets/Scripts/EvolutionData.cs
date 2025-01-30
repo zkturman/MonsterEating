@@ -10,6 +10,8 @@ public class EvolutionData : MonoBehaviour
     private Dictionary<MonsterKey, int> _choiceVoting;
     [SerializeField]
     private int _requiredCount = 10;
+    public int RequiredCount { get => _requiredCount; }
+
     private void Awake()
     {
         _choiceVoting = evolutionChoices.ToDictionary(x => x, x => 0);
@@ -25,9 +27,13 @@ public class EvolutionData : MonoBehaviour
         return _choiceVoting.OrderByDescending(x => x.Value).First().Key;
     }
 
+    public int GetCurrentTotal()
+    {
+        return _choiceVoting.Sum(x => x.Value);
+    }
+
     public bool RequiredCountMet()
     {
-        int total = _choiceVoting.Sum(x => x.Value);
-        return total == _requiredCount;
+        return GetCurrentTotal() == _requiredCount;
     }
 }

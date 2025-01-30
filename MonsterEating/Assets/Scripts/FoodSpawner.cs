@@ -33,4 +33,12 @@ public class FoodSpawner : MonoBehaviour
             _elapsedTime = 0f;
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        for (int i = 0; i < _possibleSpawnPoints.Length; i++)
+        {
+            Gizmos.DrawWireSphere(_possibleSpawnPoints[i].transform.position, 2);
+        }
+    }
 }
