@@ -180,7 +180,7 @@ Transform:
   m_Children:
   - {fileID: 7556347373530738532}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1950037470550069682
 MonoBehaviour:
@@ -198,6 +198,8 @@ MonoBehaviour:
   _idleAnimationKey: Idle
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
+  _dieAnimationKey: Die
+  _dieAnimationTimeInSeconds: 0.5
   _monsterAnimator: {fileID: 2818860872378752061}
   _monsterConsumer: {fileID: 223816873865924477}
 --- !u!114 &1622470160633949811
@@ -212,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evolutionChoices: 
-  _requiredCount: 10
+  evolutionChoices: 090000000c000000
+  _requiredCount: 12
 --- !u!114 &223816873865924477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +228,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _evolutions: []
+  _evolutions:
+  - _evolution: 9
+    _requiredFood: 0
+  - _evolution: 12
+    _requiredFood: 2
   _evolutionVoter: {fileID: 1622470160633949811}
 --- !u!1 &1110902252410477707
 GameObject:

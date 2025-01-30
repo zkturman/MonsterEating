@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 9147410061206343052}
   - component: {fileID: 2310609140061268759}
   - component: {fileID: 4577157127621024761}
+  - component: {fileID: 3604678063659339690}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -84,7 +85,7 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _dieAnimationKey: Die
-  _dieAnimationTimeInSeconds: 0.5
+  _dieAnimationTimeInSeconds: 1.2
   _monsterAnimator: {fileID: 3569416277794311617}
   _monsterConsumer: {fileID: 4577157127621024761}
 --- !u!114 &2310609140061268759
@@ -115,6 +116,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _evolutions: []
   _evolutionVoter: {fileID: 2310609140061268759}
+--- !u!136 &3604678063659339690
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051393583027439225}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6, z: 0.08}
 --- !u!1001 &3520625923436483901
 PrefabInstance:
   m_ObjectHideFlags: 0

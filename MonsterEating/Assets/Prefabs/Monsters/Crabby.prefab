@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 904797324856459723}
   - component: {fileID: 2229841281505428526}
   - component: {fileID: 3364741707352080261}
+  - component: {fileID: 7997357261441900772}
   m_Layer: 0
   m_Name: Crabby
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 1616341332030804389}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &904797324856459723
 MonoBehaviour:
@@ -52,7 +53,7 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _dieAnimationKey: Die
-  _dieAnimationTimeInSeconds: 0.5
+  _dieAnimationTimeInSeconds: 1.2
   _monsterAnimator: {fileID: 1616341332038318565}
   _monsterConsumer: {fileID: 3364741707352080261}
 --- !u!114 &2229841281505428526
@@ -67,8 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evolutionChoices: 
-  _requiredCount: 10
+  evolutionChoices: 0b000000
+  _requiredCount: 20
 --- !u!114 &3364741707352080261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +82,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _evolutions: []
+  _evolutions:
+  - _evolution: 11
+    _requiredFood: 0
+  - _evolution: 11
+    _requiredFood: 1
+  - _evolution: 11
+    _requiredFood: 2
   _evolutionVoter: {fileID: 2229841281505428526}
+--- !u!136 &7997357261441900772
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063444487086639710}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!1001 &1616341332031035591
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9039547807185052667}
+  - component: {fileID: 8435157276443319650}
+  - component: {fileID: 5898598586292907863}
+  - component: {fileID: 580362815224176393}
+  - component: {fileID: 890340359235234048}
   m_Layer: 0
   m_Name: Sparrow
   m_TagString: Untagged
@@ -30,8 +34,79 @@ Transform:
   m_Children:
   - {fileID: 766637767240609400}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8435157276443319650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866260015680185879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d04319a84e7f694c820071a8698528b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
+  _idleAnimationKey: Idle
+  _moveAnimationKey: Move
+  _eatAnimationKey: Eat
+  _dieAnimationKey: Die
+  _dieAnimationTimeInSeconds: 2.2
+  _monsterAnimator: {fileID: 766637767233057584}
+  _monsterConsumer: {fileID: 580362815224176393}
+--- !u!114 &5898598586292907863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866260015680185879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionChoices: 
+  _requiredCount: 10
+--- !u!114 &580362815224176393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866260015680185879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _evolutions: []
+  _evolutionVoter: {fileID: 5898598586292907863}
+--- !u!136 &890340359235234048
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866260015680185879}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.73
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.29, z: 0}
 --- !u!1001 &766637767240264788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,6 +180,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ade59177310454ba3c93ae4b7dc125, type: 3}
+--- !u!95 &766637767233057584 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9576292, guid: 09ade59177310454ba3c93ae4b7dc125, type: 3}
+  m_PrefabInstance: {fileID: 766637767240264788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &766637767240609400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 475692, guid: 09ade59177310454ba3c93ae4b7dc125, type: 3}

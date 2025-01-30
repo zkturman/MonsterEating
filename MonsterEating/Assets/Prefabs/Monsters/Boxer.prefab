@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5325499524802488389}
   - component: {fileID: 659517831693752903}
   - component: {fileID: 3997315002807372154}
+  - component: {fileID: 8395717052415292631}
   m_Layer: 0
   m_Name: Boxer
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 2494630061287670841}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5325499524802488389
 MonoBehaviour:
@@ -52,7 +53,7 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _dieAnimationKey: Die
-  _dieAnimationTimeInSeconds: 0.5
+  _dieAnimationTimeInSeconds: 0.8
   _monsterAnimator: {fileID: 2991190294925237259}
   _monsterConsumer: {fileID: 3997315002807372154}
 --- !u!114 &659517831693752903
@@ -67,8 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evolutionChoices: 
-  _requiredCount: 10
+  evolutionChoices: 0e000000
+  _requiredCount: 25
 --- !u!114 &3997315002807372154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +82,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _evolutions: []
+  _evolutions:
+  - _evolution: 14
+    _requiredFood: 0
   _evolutionVoter: {fileID: 659517831693752903}
+--- !u!136 &8395717052415292631
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2472223299362556797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &5948064814970698230
 GameObject:
   m_ObjectHideFlags: 0

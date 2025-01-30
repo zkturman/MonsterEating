@@ -9,6 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601933715167862968}
+  - component: {fileID: 6101411580847549688}
+  - component: {fileID: 3110998905845443482}
+  - component: {fileID: 1665001949072216260}
+  - component: {fileID: 1615858176255241591}
   m_Layer: 0
   m_Name: Blimp
   m_TagString: Untagged
@@ -30,8 +34,79 @@ Transform:
   m_Children:
   - {fileID: 8406350281480549045}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6101411580847549688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544759371328769239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d04319a84e7f694c820071a8698528b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
+  _idleAnimationKey: Idle
+  _moveAnimationKey: Move
+  _eatAnimationKey: Eat
+  _dieAnimationKey: Die
+  _dieAnimationTimeInSeconds: 1.5
+  _monsterAnimator: {fileID: 8406350281489674909}
+  _monsterConsumer: {fileID: 1665001949072216260}
+--- !u!114 &3110998905845443482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544759371328769239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionChoices: 
+  _requiredCount: 10
+--- !u!114 &1665001949072216260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544759371328769239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _evolutions: []
+  _evolutionVoter: {fileID: 3110998905845443482}
+--- !u!136 &1615858176255241591
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544759371328769239}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.2, z: 0.15}
 --- !u!1001 &8406350281480089809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,5 +183,10 @@ PrefabInstance:
 --- !u!4 &8406350281480549045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 459364, guid: 70f277dcf2cdfdd4db7ee0ca76e07767, type: 3}
+  m_PrefabInstance: {fileID: 8406350281480089809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8406350281489674909 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9585228, guid: 70f277dcf2cdfdd4db7ee0ca76e07767, type: 3}
   m_PrefabInstance: {fileID: 8406350281480089809}
   m_PrefabAsset: {fileID: 0}

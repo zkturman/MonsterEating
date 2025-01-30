@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8973531450164290974}
   - component: {fileID: 8165349213337059477}
   - component: {fileID: 1283192698535344509}
+  - component: {fileID: 4459308847738365978}
   m_Layer: 0
   m_Name: Manta
   m_TagString: Untagged
@@ -65,7 +66,7 @@ Transform:
   m_Children:
   - {fileID: 8610321117729172825}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8973531450164290974
 MonoBehaviour:
@@ -84,7 +85,7 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _dieAnimationKey: Die
-  _dieAnimationTimeInSeconds: 0.5
+  _dieAnimationTimeInSeconds: 0.7
   _monsterAnimator: {fileID: 582420344410339344}
   _monsterConsumer: {fileID: 1283192698535344509}
 --- !u!114 &8165349213337059477
@@ -99,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evolutionChoices: 
-  _requiredCount: 10
+  evolutionChoices: 0800000007000000
+  _requiredCount: 15
 --- !u!114 &1283192698535344509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +114,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _evolutions: []
+  _evolutions:
+  - _evolution: 8
+    _requiredFood: 2
+  - _evolution: 7
+    _requiredFood: 1
   _evolutionVoter: {fileID: 8165349213337059477}
+--- !u!65 &4459308847738365978
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8005340130905564364}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.35, z: 0}
 --- !u!1001 &2736945414533400535
 PrefabInstance:
   m_ObjectHideFlags: 0

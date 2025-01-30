@@ -450,6 +450,8 @@ MonoBehaviour:
   _idleAnimationKey: Idle
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
+  _dieAnimationKey: Die
+  _dieAnimationTimeInSeconds: 0.5
   _monsterAnimator: {fileID: 2912134161502295901}
   _monsterConsumer: {fileID: 0}
 --- !u!114 &5393522094136276094
@@ -483,7 +485,7 @@ MonoBehaviour:
     _requiredFood: 0
   - _evolution: 2
     _requiredFood: 1
-  _evolutionVoter: {fileID: 0}
+  _evolutionVoter: {fileID: 5393522094136276094}
 --- !u!136 &3806490128076711252
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7133164464097692595}
   - component: {fileID: 5519069149549537354}
   - component: {fileID: 7449444072666502310}
+  - component: {fileID: 6152299875677351452}
   m_Layer: 0
   m_Name: Clay
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _dieAnimationKey: Die
-  _dieAnimationTimeInSeconds: 0.5
+  _dieAnimationTimeInSeconds: 1.5
   _monsterAnimator: {fileID: 958948041581635642}
   _monsterConsumer: {fileID: 7449444072666502310}
 --- !u!114 &5519069149549537354
@@ -83,6 +84,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _evolutions: []
   _evolutionVoter: {fileID: 5519069149549537354}
+--- !u!136 &6152299875677351452
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606446549166853966}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Height: 1.4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &1420087267671062188
 PrefabInstance:
   m_ObjectHideFlags: 0

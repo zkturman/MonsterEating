@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5807844211978871426}
   - component: {fileID: 5090326536236297700}
   - component: {fileID: 5423030245814798750}
+  - component: {fileID: 2272214580806461630}
   m_Layer: 0
   m_Name: Juggernaut
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MonoBehaviour:
   _moveAnimationKey: Move
   _eatAnimationKey: Eat
   _dieAnimationKey: Die
-  _dieAnimationTimeInSeconds: 0.5
+  _dieAnimationTimeInSeconds: 1.9
   _monsterAnimator: {fileID: 3538998364860029433}
   _monsterConsumer: {fileID: 5423030245814798750}
 --- !u!114 &5090326536236297700
@@ -83,6 +84,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _evolutions: []
   _evolutionVoter: {fileID: 5090326536236297700}
+--- !u!136 &2272214580806461630
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2357185314749249977}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.75
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.14, z: 0}
 --- !u!1001 &3538998364869350321
 PrefabInstance:
   m_ObjectHideFlags: 0

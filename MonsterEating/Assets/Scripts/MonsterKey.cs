@@ -6,5 +6,17 @@ public enum MonsterKey
 {
     Ghost,
     Turtle,
-    Slime
+    Slime,
+    Manta,
+    Stinger,
+    Juggernaut,
+    Sparrow,
+    Griffin,
+    Blimp,
+    Fungi,
+    Crabby,
+    Golem,
+    Bunny,
+    Boxer,
+    Clay
 }
