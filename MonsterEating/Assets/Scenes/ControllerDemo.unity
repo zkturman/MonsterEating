@@ -1803,10 +1803,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1930570533021962687, guid: edc176a9b3caa904bb62791ca30ae9be, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930570533021962687, guid: edc176a9b3caa904bb62791ca30ae9be, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6b08ccefe2c8c5e4fb69ec0c3d5d92df, type: 3}
