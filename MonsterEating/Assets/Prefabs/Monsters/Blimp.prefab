@@ -67,8 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b783cb0f90c5c948b619cb6cb7f190c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evolutionChoices: 
-  _requiredCount: 10
+  evolutionChoices: 00000000
+  _requiredCount: 100
 --- !u!114 &1665001949072216260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +81,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e51d584b363e24ca08de08cf7acbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _evolutions: []
+  _evolutions:
+  - _evolution: 0
+    _requiredFood: 0
+  - _evolution: 0
+    _requiredFood: 1
+  - _evolution: 0
+    _requiredFood: 2
   _evolutionVoter: {fileID: 3110998905845443482}
 --- !u!1001 &8406350281480089809
 PrefabInstance:
