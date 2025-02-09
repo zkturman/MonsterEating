@@ -411,7 +411,7 @@ Transform:
   - {fileID: 1401300381301476460}
   - {fileID: 1181089531655473790}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2912134161502295901
 Animator:
@@ -453,7 +453,7 @@ MonoBehaviour:
   _dieAnimationKey: Die
   _dieAnimationTimeInSeconds: 0.5
   _monsterAnimator: {fileID: 2912134161502295901}
-  _monsterConsumer: {fileID: 0}
+  _monsterConsumer: {fileID: 5669707556922795443}
 --- !u!114 &5393522094136276094
 MonoBehaviour:
   m_ObjectHideFlags: 0
