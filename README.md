@@ -22,3 +22,4 @@ When a monster collides with a falling food object, the MonsterController intera
 When food is successfully consumed with the MonsterConsumer class, it is registered in an [EvolutionData](MonsterEating/Assets/Scripts/EvolutionData.cs) class. This class utilises a Dictionary and Linq to keep track of the monsters current progress towards the next monster. Once the designated total is met, as set in the serialised data, the monster will transform.
 
 ## Collecting
+Each time a player first encounters a new monster, the monster is logged using Unity's PlayerPrefs with a unique code. When the player launches the start screen, all of the logged monsters appear on the screen. This feature allows the player to see some the monsters they've collected in a more 'natural' habitat. It also allows them to continue seeing a monster after they lose.
